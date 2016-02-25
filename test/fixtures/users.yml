@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fname: MyString
+  lname: MyString
+  email: dickda@gvsu.edu
+  thumbnail: mystring.jpg
+
+two:
+  fname: MyString
+  lname: MyString
+  email: something@gvsu.edu
+  thumbnail: string.png
+
+
