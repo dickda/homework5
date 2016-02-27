@@ -7,8 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="header">
+     <a href = "/"><img src="http://media.merchantcircle.com/21310320/hpclogo_full.jpeg" alt="Help Desk" style="width:100px;height:75px;"></a>
+    <div id="title">
+     <%= @page_title || "The Help Desk Site!" %><!-- <label id="code.depot.e.title"/> -->
+  
+   </div>
+   
 
-<%= yield %>
+ </div>
+ <div id="sidebar">
 
+  <div id = "menu">
+    <ul class="menu">
+      <li><a  href = "/">Home</a></li>
+      <li><a  href = "/users">Users</a></li>
+      <li><a  href = "/bugs">Bugs</a></li>
+      <li><a  href = "/contact">Contact Us</a></li>
+    </ul>
+  </div>
+ </div>
+  <div id="main">
+    <%= yield %>
+  </div>
 </body>
 </html>

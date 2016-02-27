@@ -1,0 +1,136 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+ html{
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+}
+body{
+    height:100%; /* force the BODY element to match the height of the HTML element */
+}
+ #header{
+   height:110px;
+   background:#2980b9;
+   color:white;
+   font-style:"Lucida Console, WildWest, Georgia, Arial";
+  img{
+    float:left;
+    margin-left:15px;
+    padding-top:10px;
+  }
+   #title{
+     padding-top:20px;
+     text-align: center;
+     margin-bottom:70px;
+     font-size:30px;
+   }
+
+ }
+
+#sidebar{
+  padding-top:10px;
+  background:#2980b9;
+  float:left;
+  width:250px;
+  height:100%;
+  min-height:600px;
+  margin-right:20px;
+ 
+  #menu{
+  ul.menu{
+    margin:0; 
+    padding:0;
+    list-style-type:none;
+    display:block;
+    line-height:300%;
+    width:250px;}
+    
+    ul.menu li{ 
+      margin:0;
+      padding:0;
+      border-top:1px solid #34A8eb;
+      border-bottom:1px solid #3498ec;
+    }
+    
+    ul.menu li a{
+      display:block;
+      text-decoration:none;
+      color:#fff;
+      background:#3498db;
+      padding:0 0 0 20px;
+      width:250;
+      
+    }
+    
+    ul.menu li a:hover{
+      background:#2980b9 url("images/vert-one_arrow.gif") no-repeat 0 9px;}
+    
+    ul.menu li a.current,ul.menu li a.current:hover{
+      background:#2980EF url("images/vert-one_arrow.gif") no-repeat 0 9px;
+      
+    }
+  }
+}  
+
+#main{
+  padding-top:20px;
+  color:black;
+  margin-right:10%;
+  table{
+    th{
+      background: #5F5;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    td{
+       min-width: 100px;
+    }
+  }
+}
+
+.btn {
+  a{
+    color:white;
+  }
+  float:right;
+  margin-right:12%;
+  background: #fa4300;
+  background-image: -webkit-linear-gradient(top, #fa4300, #f50505);
+  background-image: -moz-linear-gradient(top, #fa4300, #f50505);
+  background-image: -ms-linear-gradient(top, #fa4300, #f50505);
+  background-image: -o-linear-gradient(top, #fa4300, #f50505);
+  background-image: linear-gradient(to bottom, #fa4300, #f50505);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #de1b1b;
+  background-image: -webkit-linear-gradient(top, #de1b1b, #eb4817);
+  background-image: -moz-linear-gradient(top, #de1b1b, #eb4817);
+  background-image: -ms-linear-gradient(top, #de1b1b, #eb4817);
+  background-image: -o-linear-gradient(top, #de1b1b, #eb4817);
+  background-image: linear-gradient(to bottom, #de1b1b, #eb4817);
+  text-decoration: none;
+}
+
