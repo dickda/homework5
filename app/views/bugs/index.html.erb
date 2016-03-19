@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
-<div class="btn"><%= link_to 'New Bug', new_bug_path %></div>
+<div class="btn"><%= link_to 'New Bug', new_bug_path, remote: true %></div>
 <h1>Listing Bugs</h1>
-
-<table>
+<table >
   <thead>
     <tr>
       <th>User</th>
@@ -15,25 +14,15 @@
     </tr>
   </thead>
 
-  <tbody>
-    <% @bugs.each do |bug| %>
-      <tr <%= if bug.priority == 'high' && bug.status != 'closed'
-          "class = important" 
-        end %>>
-        <td><%= ((bug.user.try(:fname) || " ") + " "+ (bug.user.try(:lname) ||" ") || "NA") %></td>
-        <td><%= bug.title %></td>
-        <td><%= bug.description %></td>
-        <td><%= bug.issue_type %></td>
-        <td><%= bug.priority %></td>
-        <td><%= bug.status %></td>
-        <td><%= link_to 'Show', bug %></td>
-        <td><%= link_to 'Edit', edit_bug_path(bug) %></td>
-        <td><%= link_to 'Destroy', bug, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+  <tbody id = "bugs">
+
+    <%= render @bugs %>
+
   </tbody>
+  
 </table>
 
+<div id="bug-form" style="display:none;"></div>
 <br>
 
 

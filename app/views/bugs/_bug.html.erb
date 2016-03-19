@@ -1,0 +1,19 @@
+<tr 
+<% if  bug.priority == 'high'  && bug.status != 'closed'  %>
+class = "important bug"
+<% else %>
+  class = "bug"
+ <% end %>
+ <% if bug == @current_bug %>
+   id ="current_bug"
+   <% end %> >
+  <td><%= ((bug.user.try(:fname) || " ") + " "+ (bug.user.try(:lname) ||" ") || "NA") %></td>
+  <td><%= bug.title %></td>
+  <td><%= bug.description %></td>
+  <td><%= bug.issue_type %></td>
+  <td><%= bug.priority %></td>
+  <td><%= bug.status %></td>
+  <td><%= link_to 'Show', bug %></td>
+  <td><%= link_to 'Edit', edit_bug_path(bug), remote: true %></td>
+  <td><%= link_to 'Destroy', bug, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %></td>
+</tr>

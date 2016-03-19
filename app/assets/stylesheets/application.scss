@@ -43,11 +43,14 @@ body{
 #sidebar{
   padding-top:10px;
   background:#2980b9;
-  float:left;
-  width:250px;
+
   height:100%;
-  min-height:600px;
-  margin-right:20px;
+
+  margin-right:30px;
+  position:absolute;
+  left:0x;
+  bottom:0px;
+  top:110px;
  
   #menu{
   ul.menu{
@@ -88,7 +91,9 @@ body{
 #main{
   padding-top:20px;
   color:black;
+  margin-left:270px;
   margin-right:10%;
+ 
   table{
     th{
       background: #5F5;
